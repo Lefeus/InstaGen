@@ -1,0 +1,572 @@
+[ 21:13:46 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 21:13:46 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 21:13:46 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 21:13:46 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 21:13:46 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 21:13:47 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 21:14:10 ] [ INFO ] > Exiting
+[ 21:14:17 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 21:14:17 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 21:14:17 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 21:14:17 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 21:14:17 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 21:14:18 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 21:14:27 ] [ INFO ] > Exiting
+[ 22:07:35 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 22:07:35 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 22:07:35 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 22:07:35 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 22:07:35 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 22:07:36 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 22:08:15 ] [ WARNING ] > Use Proxies turned off
+[ 22:08:15 ] [ OK ] > Number of accounts accepted
+[ 22:08:15 ] [ OK ] > Phone Number Accepted
+[ 22:08:15 ] [ SUCCESS ] > Name Accepted
+[ 22:08:15 ] [ SUCCESS ] > Username Accepted
+[ 22:08:15 ] [ SUCCESS ] > Password Accepted
+[ 22:08:15 ] [ INFO ] > Accepted Actions :> [32m[ 6 ]
+[ 22:08:15 ] [ INFO ] > Data: [ ACCNumber: 1 ] [ PhoneNum: +48 732 087 255 ] [ Name: wieszakware2022 ] [ Username: wieszakware_instagen ] [ Password: wieszakware26 ] [ Proxy: None ]
+[ 22:08:15 ] [ WARNING ] > This generator requires "high quality" proxies!
+[ 22:08:19 ] [ DEBUG ] > Attempting to start webdriver
+[ 22:08:24 ] [ SUCCESS ] > Webdriver Started with proxy [ None ]
+[ 22:08:24 ] [ DEBUG ] > Current user agent: [ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 ]
+[ 22:08:25 ] [ INFO ] > Successfully yoinked ip
+[ 22:08:25 ] [ DEBUG ] > Attempting to confirm cookies
+[ 22:08:25 ] [ OK ] > Cookies confirmed [ Cookies list: ( [] ) ]
+[ 22:08:25 ] [ DEBUG ] > Attempting to redirect to signup page
+[ 22:08:31 ] [ DEBUG ] > Attempting to register on https://www.instagram.com/accounts/emailsignup/
+[ 22:08:31 ] [ INFO ] > Attempting to insert Phone Number
+[ 22:08:31 ] [ INFO ] > Attempting to insert Name
+[ 22:08:31 ] [ INFO ] > Attempting to insert Username
+[ 22:08:31 ] [ INFO ] > Attempting to insert Password
+[ 22:08:31 ] [ INFO ] > Attempting to click signup button
+[ 22:08:31 ] [ SUCCESS ] > Phone Number inserted successfully
+[ 22:08:31 ] [ SUCCESS ] > Name inserted successfully
+[ 22:08:32 ] [ SUCCESS ] > Username inserted successfully
+[ 22:08:32 ] [ OK ] > Continue button clicked
+[ 22:08:36 ] [ CRITICAL ] > Unexpected error ocurred
+[ 22:08:36 ] [ CRITICAL ] > Possible problems and fixes:
+[ 22:08:36 ] [ CRITICAL ] > 1. Phone is used to frequently and couldn't proceed
+[ 22:08:36 ] [ CRITICAL ] > 2. Instagram Generator generated used username, you should restart app
+[ 22:08:36 ] [ CRITICAL ] > 3. You used proxy where Instagram is acting weird
+[ 22:08:36 ] [ DEBUG ] > Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='react-root']/section/main/div/div/div[1]/div/div[4]/div/div/span/span[1]/select"}
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003978B3+2193587]
+	Ordinal0 [0x00330681+1771137]
+	Ordinal0 [0x002441A8+803240]
+	Ordinal0 [0x002724A0+992416]
+	Ordinal0 [0x0027273B+993083]
+	Ordinal0 [0x0029F7C2+1177538]
+	Ordinal0 [0x0028D7F4+1103860]
+	Ordinal0 [0x0029DAE2+1170146]
+	Ordinal0 [0x0028D5C6+1103302]
+	Ordinal0 [0x002677E0+948192]
+	Ordinal0 [0x002686E6+952038]
+	GetHandleVerifier [0x00640CB2+2738370]
+	GetHandleVerifier [0x006321B8+2678216]
+	GetHandleVerifier [0x004217AA+512954]
+	GetHandleVerifier [0x00420856+509030]
+	Ordinal0 [0x0033743B+1799227]
+	Ordinal0 [0x0033BB68+1817448]
+	Ordinal0 [0x0033BC55+1817685]
+	Ordinal0 [0x00345230+1856048]
+	BaseThreadInitThunk [0x7719FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77517A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77517A6E+238]
+
+[ 22:08:36 ] [ INFO ] > Enter Confirmation code sent to [ +48 732 087 255 ]
+[ 22:08:36 ] [ INFO ] > Please enter your confirmation code
+[ 22:08:41 ] [ DEBUG ] > Came to loop
+[ 22:08:41 ] [ DEBUG ] > Exited loop
+[ 22:08:44 ] [ DEBUG ] > Attempting to accept cookies...
+[ 22:08:49 ] [ DEBUG ] > Message: 
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003978B3+2193587]
+	Ordinal0 [0x00330681+1771137]
+	Ordinal0 [0x002441A8+803240]
+	Ordinal0 [0x002724A0+992416]
+	Ordinal0 [0x0027273B+993083]
+	Ordinal0 [0x0029F7C2+1177538]
+	Ordinal0 [0x0028D7F4+1103860]
+	Ordinal0 [0x0029DAE2+1170146]
+	Ordinal0 [0x0028D5C6+1103302]
+	Ordinal0 [0x002677E0+948192]
+	Ordinal0 [0x002686E6+952038]
+	GetHandleVerifier [0x00640CB2+2738370]
+	GetHandleVerifier [0x006321B8+2678216]
+	GetHandleVerifier [0x004217AA+512954]
+	GetHandleVerifier [0x00420856+509030]
+	Ordinal0 [0x0033743B+1799227]
+	Ordinal0 [0x0033BB68+1817448]
+	Ordinal0 [0x0033BC55+1817685]
+	Ordinal0 [0x00345230+1856048]
+	BaseThreadInitThunk [0x7719FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77517A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77517A6E+238]
+
+[ 22:09:32 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 22:09:32 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 22:09:32 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 22:09:32 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 22:09:32 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 22:09:33 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 22:09:58 ] [ WARNING ] > Use Proxies turned off
+[ 22:09:58 ] [ OK ] > Number of accounts accepted
+[ 22:09:58 ] [ OK ] > Phone Number Accepted
+[ 22:09:58 ] [ SUCCESS ] > Name Accepted
+[ 22:09:58 ] [ SUCCESS ] > Username Accepted
+[ 22:09:58 ] [ SUCCESS ] > Password Accepted
+[ 22:09:58 ] [ INFO ] > Accepted Actions :> [32m[ 6 ]
+[ 22:09:58 ] [ INFO ] > Data: [ ACCNumber: 1 ] [ PhoneNum: +48 732 087 255 ] [ Name: wieszakware ] [ Username: wieszakware_freeware_2022 ] [ Password: freeware2922 ] [ Proxy: None ]
+[ 22:09:58 ] [ WARNING ] > This generator requires "high quality" proxies!
+[ 22:09:59 ] [ DEBUG ] > Attempting to start webdriver
+[ 22:10:10 ] [ SUCCESS ] > Webdriver Started with proxy [ None ]
+[ 22:10:10 ] [ DEBUG ] > Current user agent: [ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 ]
+[ 22:10:11 ] [ INFO ] > Successfully yoinked ip
+[ 22:10:11 ] [ DEBUG ] > Attempting to confirm cookies
+[ 22:10:21 ] [ CRITICAL ] > Unable to confirm cookies. | Cookies already confirmed.
+[ 22:10:21 ] [ DEBUG ] > Attempting to redirect to signup page
+[ 22:10:28 ] [ DEBUG ] > Attempting to register on https://www.instagram.com/accounts/emailsignup/
+[ 22:10:28 ] [ INFO ] > Attempting to insert Phone Number
+[ 22:10:28 ] [ INFO ] > Attempting to insert Name
+[ 22:10:28 ] [ INFO ] > Attempting to insert Username
+[ 22:10:28 ] [ INFO ] > Attempting to insert Password
+[ 22:10:28 ] [ INFO ] > Attempting to click signup button
+[ 22:10:28 ] [ SUCCESS ] > Phone Number inserted successfully
+[ 22:10:28 ] [ SUCCESS ] > Name inserted successfully
+[ 22:10:28 ] [ SUCCESS ] > Username inserted successfully
+[ 22:10:28 ] [ OK ] > Continue button clicked
+[ 22:10:32 ] [ INFO ] > Enter Confirmation code sent to [ +48 732 087 255 ]
+[ 22:10:32 ] [ INFO ] > Please enter your confirmation code
+[ 22:10:37 ] [ DEBUG ] > Came to loop
+[ 22:10:38 ] [ DEBUG ] > Not passed, trying again
+[ 22:10:40 ] [ DEBUG ] > Not passed, trying again
+[ 22:10:42 ] [ DEBUG ] > Not passed, trying again
+[ 22:10:44 ] [ DEBUG ] > Not passed, trying again
+[ 22:10:46 ] [ DEBUG ] > Not passed, trying again
+[ 22:10:48 ] [ DEBUG ] > Not passed, trying again
+[ 22:10:50 ] [ DEBUG ] > Not passed, trying again
+[ 22:10:52 ] [ DEBUG ] > Not passed, trying again
+[ 22:10:54 ] [ DEBUG ] > Not passed, trying again
+[ 22:10:56 ] [ DEBUG ] > Not passed, trying again
+[ 22:10:58 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:00 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:02 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:04 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:06 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:08 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:10 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:12 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:14 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:16 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:18 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:20 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:22 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:24 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:26 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:28 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:30 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:32 ] [ DEBUG ] > Not passed, trying again
+[ 22:11:34 ] [ DEBUG ] > Not passed, trying again
+[ 22:15:09 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 22:15:09 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 22:15:09 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 22:15:09 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 22:15:09 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 22:15:10 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 22:15:39 ] [ WARNING ] > Use Proxies turned off
+[ 22:15:39 ] [ OK ] > Number of accounts accepted
+[ 22:15:39 ] [ OK ] > Phone Number Accepted
+[ 22:15:39 ] [ SUCCESS ] > Name Accepted
+[ 22:15:39 ] [ SUCCESS ] > Username Accepted
+[ 22:15:39 ] [ SUCCESS ] > Password Accepted
+[ 22:15:39 ] [ INFO ] > Accepted Actions :> [32m[ 6 ]
+[ 22:15:39 ] [ INFO ] > Data: [ ACCNumber: 1 ] [ PhoneNum: +48 732 087 255 ] [ Name: plahd14 ] [ Username: please_wieszakware_best ] [ Password: wieszakisthebest19 ] [ Proxy: None ]
+[ 22:15:39 ] [ WARNING ] > This generator requires "high quality" proxies!
+[ 22:15:40 ] [ DEBUG ] > Attempting to start webdriver
+[ 22:15:46 ] [ SUCCESS ] > Webdriver Started with proxy [ None ]
+[ 22:15:46 ] [ DEBUG ] > Current user agent: [ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 ]
+[ 22:15:46 ] [ INFO ] > Successfully yoinked ip
+[ 22:15:46 ] [ DEBUG ] > Attempting to confirm cookies
+[ 22:15:46 ] [ OK ] > Cookies confirmed [ Cookies list: ( [] ) ]
+[ 22:15:46 ] [ DEBUG ] > Attempting to redirect to signup page
+[ 22:15:55 ] [ DEBUG ] > Attempting to register on https://www.instagram.com/
+[ 22:15:55 ] [ INFO ] > Attempting to insert Phone Number
+[ 22:15:55 ] [ INFO ] > Attempting to insert Name
+[ 22:15:55 ] [ INFO ] > Attempting to insert Username
+[ 22:15:55 ] [ INFO ] > Attempting to insert Password
+[ 22:15:55 ] [ INFO ] > Attempting to click signup button
+[ 22:15:55 ] [ CRITICAL ] > Unable to insert phone number
+[ 22:15:55 ] [ CRITICAL ] > Unable to insert name
+[ 22:15:55 ] [ CRITICAL ] > Unable to insert username
+[ 22:15:55 ] [ CRITICAL ] > Unable to insert password
+[ 22:16:44 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 22:16:44 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 22:16:44 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 22:16:44 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 22:16:44 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 22:16:45 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 22:17:21 ] [ WARNING ] > Use Proxies turned off
+[ 22:17:21 ] [ OK ] > Number of accounts accepted
+[ 22:17:21 ] [ OK ] > Phone Number Accepted
+[ 22:17:21 ] [ SUCCESS ] > Name Accepted
+[ 22:17:21 ] [ DEBUG ] > Getting username from .input\usernames.txt
+[ 22:17:21 ] [ WARNING ] > GetUsername returned an error: [ .input\usernames.txt file is empty ]
+[ 22:17:21 ] [ INFO ] > Generating username...
+[ 22:17:21 ] [ SUCCESS ] > Generated h8HtUiZGgrW3RipQX2lAgA9l
+[ 22:17:21 ] [ SUCCESS ] > Password Accepted
+[ 22:17:21 ] [ INFO ] > Accepted Actions :> [32m[ 6 ]
+[ 22:17:21 ] [ INFO ] > Data: [ ACCNumber: 1 ] [ PhoneNum: +48 732087255 ] [ Name: wieszakware2 ] [ Username: h8HtUiZGgrW3RipQX2lAgA9l ] [ Password: sdfsdfaS246 ] [ Proxy: None ]
+[ 22:17:21 ] [ WARNING ] > This generator requires "high quality" proxies!
+[ 22:17:22 ] [ DEBUG ] > Attempting to start webdriver
+[ 22:17:29 ] [ SUCCESS ] > Webdriver Started with proxy [ None ]
+[ 22:17:29 ] [ DEBUG ] > Current user agent: [ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 ]
+[ 22:17:29 ] [ INFO ] > Successfully yoinked ip
+[ 22:17:29 ] [ DEBUG ] > Attempting to confirm cookies
+[ 22:17:29 ] [ OK ] > Cookies confirmed [ Cookies list: ( [] ) ]
+[ 22:17:29 ] [ DEBUG ] > Attempting to redirect to signup page
+[ 22:17:36 ] [ DEBUG ] > Attempting to register on https://www.instagram.com/accounts/emailsignup/
+[ 22:17:36 ] [ INFO ] > Attempting to insert Phone Number
+[ 22:17:36 ] [ INFO ] > Attempting to insert Name
+[ 22:17:36 ] [ INFO ] > Attempting to insert Username
+[ 22:17:36 ] [ INFO ] > Attempting to insert Password
+[ 22:17:36 ] [ INFO ] > Attempting to click signup button
+[ 22:17:36 ] [ CRITICAL ] > Unable to insert phone number
+[ 22:17:36 ] [ CRITICAL ] > Unable to insert name
+[ 22:17:36 ] [ CRITICAL ] > Unable to insert username
+[ 22:17:36 ] [ CRITICAL ] > Unable to insert password
+[ 22:18:01 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 22:18:01 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 22:18:01 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 22:18:01 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 22:18:01 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 22:18:01 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 22:18:16 ] [ WARNING ] > Use Proxies turned off
+[ 22:18:16 ] [ OK ] > Number of accounts accepted
+[ 22:18:16 ] [ OK ] > Phone Number Accepted
+[ 22:18:16 ] [ SUCCESS ] > Name Accepted
+[ 22:18:16 ] [ SUCCESS ] > Username Accepted
+[ 22:18:16 ] [ SUCCESS ] > Password Accepted
+[ 22:18:16 ] [ INFO ] > Accepted Actions :> [32m[ 6 ]
+[ 22:18:16 ] [ INFO ] > Data: [ ACCNumber: 1 ] [ PhoneNum: +48 732 087 255 ] [ Name: dsfsdf ] [ Username: dssdfszx1wq25 ] [ Password: plahjdg24 ] [ Proxy: None ]
+[ 22:18:16 ] [ WARNING ] > This generator requires "high quality" proxies!
+[ 22:18:17 ] [ DEBUG ] > Attempting to start webdriver
+[ 22:18:23 ] [ SUCCESS ] > Webdriver Started with proxy [ None ]
+[ 22:18:23 ] [ DEBUG ] > Current user agent: [ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 ]
+[ 22:18:23 ] [ INFO ] > Successfully yoinked ip
+[ 22:18:23 ] [ DEBUG ] > Attempting to confirm cookies
+[ 22:18:23 ] [ OK ] > Cookies confirmed [ Cookies list: ( [] ) ]
+[ 22:18:23 ] [ DEBUG ] > Attempting to redirect to signup page
+[ 22:18:30 ] [ DEBUG ] > Attempting to register on https://www.instagram.com/accounts/emailsignup/
+[ 22:18:30 ] [ INFO ] > Attempting to insert Phone Number
+[ 22:18:30 ] [ INFO ] > Attempting to insert Name
+[ 22:18:30 ] [ INFO ] > Attempting to insert Username
+[ 22:18:30 ] [ INFO ] > Attempting to insert Password
+[ 22:18:30 ] [ INFO ] > Attempting to click signup button
+[ 22:18:30 ] [ SUCCESS ] > Phone Number inserted successfully
+[ 22:18:30 ] [ SUCCESS ] > Name inserted successfully
+[ 22:18:30 ] [ SUCCESS ] > Username inserted successfully
+[ 22:18:30 ] [ OK ] > Continue button clicked
+[ 22:18:34 ] [ INFO ] > Enter Confirmation code sent to [ +48 732 087 255 ]
+[ 22:18:34 ] [ INFO ] > Please enter your confirmation code
+[ 22:18:39 ] [ DEBUG ] > Came to loop
+[ 22:18:39 ] [ DEBUG ] > Exited loop
+[ 22:18:42 ] [ DEBUG ] > Attempting to accept cookies...
+[ 22:18:48 ] [ DEBUG ] > Message: 
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003978B3+2193587]
+	Ordinal0 [0x00330681+1771137]
+	Ordinal0 [0x002441A8+803240]
+	Ordinal0 [0x002724A0+992416]
+	Ordinal0 [0x0027273B+993083]
+	Ordinal0 [0x0029F7C2+1177538]
+	Ordinal0 [0x0028D7F4+1103860]
+	Ordinal0 [0x0029DAE2+1170146]
+	Ordinal0 [0x0028D5C6+1103302]
+	Ordinal0 [0x002677E0+948192]
+	Ordinal0 [0x002686E6+952038]
+	GetHandleVerifier [0x00640CB2+2738370]
+	GetHandleVerifier [0x006321B8+2678216]
+	GetHandleVerifier [0x004217AA+512954]
+	GetHandleVerifier [0x00420856+509030]
+	Ordinal0 [0x0033743B+1799227]
+	Ordinal0 [0x0033BB68+1817448]
+	Ordinal0 [0x0033BC55+1817685]
+	Ordinal0 [0x00345230+1856048]
+	BaseThreadInitThunk [0x7719FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77517A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77517A6E+238]
+
+[ 22:18:48 ] [ INFO ] > Cookies already selected
+[ 22:19:11 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 22:19:11 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 22:19:11 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 22:19:11 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 22:19:11 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 22:19:12 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 22:19:20 ] [ INFO ] > Exiting
+[ 22:21:12 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 22:21:12 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 22:21:12 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 22:21:12 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 22:21:12 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 22:21:13 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 22:21:30 ] [ WARNING ] > Use Proxies turned off
+[ 22:21:30 ] [ OK ] > Number of accounts accepted
+[ 22:21:30 ] [ OK ] > Phone Number Accepted
+[ 22:21:30 ] [ SUCCESS ] > Name Accepted
+[ 22:21:30 ] [ DEBUG ] > Getting username from .input\usernames.txt
+[ 22:21:30 ] [ WARNING ] > GetUsername returned an error: [ .input\usernames.txt file is empty ]
+[ 22:21:30 ] [ INFO ] > Generating username...
+[ 22:21:30 ] [ SUCCESS ] > Generated dL0nUXLFhExfFzkBSJTpgPoN
+[ 22:21:30 ] [ SUCCESS ] > Password Accepted
+[ 22:21:30 ] [ INFO ] > Accepted Actions :> [32m[ 6 ]
+[ 22:21:30 ] [ INFO ] > Data: [ ACCNumber: 1 ] [ PhoneNum: +48 732 087 255 ] [ Name: oplahd325 ] [ Username: dL0nUXLFhExfFzkBSJTpgPoN ] [ Password: sdfsdfhs25 ] [ Proxy: None ]
+[ 22:21:30 ] [ WARNING ] > This generator requires "high quality" proxies!
+[ 22:21:31 ] [ DEBUG ] > Attempting to start webdriver
+[ 22:21:36 ] [ SUCCESS ] > Webdriver Started with proxy [ None ]
+[ 22:21:37 ] [ DEBUG ] > Current user agent: [ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 ]
+[ 22:21:37 ] [ INFO ] > Successfully yoinked ip
+[ 22:21:37 ] [ DEBUG ] > Attempting to confirm cookies
+[ 22:21:37 ] [ OK ] > Cookies confirmed [ Cookies list: ( [] ) ]
+[ 22:21:37 ] [ DEBUG ] > Attempting to redirect to signup page
+[ 22:21:54 ] [ CRITICAL ] > Unable to redirect to signup page
+[ 22:22:12 ] [ CRITICAL ] > Unable to redirect to signup page
+[ 22:22:46 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 22:22:46 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 22:22:46 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 22:22:46 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 22:22:46 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 22:22:46 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 22:23:05 ] [ WARNING ] > Use Proxies turned off
+[ 22:23:05 ] [ OK ] > Number of accounts accepted
+[ 22:23:05 ] [ OK ] > Phone Number Accepted
+[ 22:23:06 ] [ SUCCESS ] > Name Accepted
+[ 22:23:06 ] [ DEBUG ] > Getting username from .input\usernames.txt
+[ 22:23:06 ] [ WARNING ] > GetUsername returned an error: [ .input\usernames.txt file is empty ]
+[ 22:23:06 ] [ INFO ] > Generating username...
+[ 22:23:06 ] [ SUCCESS ] > Generated zB6fD04Qzq5SrXO3M55DBTQC
+[ 22:23:06 ] [ SUCCESS ] > Password Accepted
+[ 22:23:06 ] [ INFO ] > Accepted Actions :> [32m[ 6 ]
+[ 22:23:06 ] [ INFO ] > Data: [ ACCNumber: 1 ] [ PhoneNum: +48 732 087 255 ] [ Name: plshsa12 ] [ Username: zB6fD04Qzq5SrXO3M55DBTQC ] [ Password: wieszakware7356 ] [ Proxy: None ]
+[ 22:23:06 ] [ WARNING ] > This generator requires "high quality" proxies!
+[ 22:23:07 ] [ DEBUG ] > Attempting to start webdriver
+[ 22:23:12 ] [ SUCCESS ] > Webdriver Started with proxy [ None ]
+[ 22:23:12 ] [ DEBUG ] > Current user agent: [ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 ]
+[ 22:23:13 ] [ INFO ] > Successfully yoinked ip
+[ 22:23:13 ] [ DEBUG ] > Attempting to confirm cookies
+[ 22:23:13 ] [ OK ] > Cookies confirmed [ Cookies list: ( [] ) ]
+[ 22:23:13 ] [ DEBUG ] > Attempting to redirect to signup page
+[ 22:23:19 ] [ DEBUG ] > Attempting to register on https://www.instagram.com/accounts/emailsignup/
+[ 22:23:19 ] [ INFO ] > Attempting to insert Phone Number
+[ 22:23:19 ] [ INFO ] > Attempting to insert Name
+[ 22:23:19 ] [ INFO ] > Attempting to insert Username
+[ 22:23:19 ] [ INFO ] > Attempting to insert Password
+[ 22:23:19 ] [ INFO ] > Attempting to click signup button
+[ 22:23:19 ] [ SUCCESS ] > Phone Number inserted successfully
+[ 22:23:19 ] [ SUCCESS ] > Name inserted successfully
+[ 22:23:19 ] [ SUCCESS ] > Username inserted successfully
+[ 22:23:20 ] [ OK ] > Continue button clicked
+[ 22:23:24 ] [ INFO ] > Enter Confirmation code sent to [ +48 732 087 255 ]
+[ 22:23:24 ] [ INFO ] > Please enter your confirmation code
+[ 22:23:29 ] [ DEBUG ] > Came to loop
+[ 22:23:29 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:31 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:33 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:35 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:37 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:39 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:41 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:43 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:45 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:47 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:49 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:51 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:53 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:55 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:57 ] [ DEBUG ] > Not passed, trying again
+[ 22:23:59 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:01 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:03 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:06 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:08 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:10 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:12 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:14 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:16 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:18 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:20 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:22 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:24 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:26 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:28 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:30 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:32 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:34 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:36 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:38 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:40 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:42 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:44 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:46 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:48 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:50 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:52 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:54 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:56 ] [ DEBUG ] > Not passed, trying again
+[ 22:24:58 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:00 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:02 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:04 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:06 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:08 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:10 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:12 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:14 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:16 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:18 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:20 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:22 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:24 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:26 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:29 ] [ DEBUG ] > Not passed, trying again
+[ 22:25:32 ] [ DEBUG ] > Exited loop
+[ 22:26:58 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 22:26:58 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 22:26:58 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 22:26:58 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 22:26:58 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 22:26:59 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 22:27:18 ] [ WARNING ] > Use Proxies turned off
+[ 22:27:18 ] [ OK ] > Number of accounts accepted
+[ 22:27:18 ] [ OK ] > Phone Number Accepted
+[ 22:27:18 ] [ SUCCESS ] > Name Accepted
+[ 22:27:18 ] [ DEBUG ] > Getting username from .input\usernames.txt
+[ 22:27:18 ] [ WARNING ] > GetUsername returned an error: [ .input\usernames.txt file is empty ]
+[ 22:27:18 ] [ INFO ] > Generating username...
+[ 22:27:18 ] [ SUCCESS ] > Generated cH9c5DinY4NUDfCVYjwicJ5G
+[ 22:27:18 ] [ SUCCESS ] > Password Accepted
+[ 22:27:18 ] [ INFO ] > Accepted Actions :> [32m[ 6 ]
+[ 22:27:18 ] [ INFO ] > Data: [ ACCNumber: 1 ] [ PhoneNum: +48 732 087 418 ] [ Name: dffsd ] [ Username: cH9c5DinY4NUDfCVYjwicJ5G ] [ Password: wieszkawaew72156 ] [ Proxy: None ]
+[ 22:27:18 ] [ WARNING ] > This generator requires "high quality" proxies!
+[ 22:27:19 ] [ DEBUG ] > Attempting to start webdriver
+[ 22:27:24 ] [ SUCCESS ] > Webdriver Started with proxy [ None ]
+[ 22:27:24 ] [ DEBUG ] > Current user agent: [ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 ]
+[ 22:27:25 ] [ INFO ] > Successfully yoinked ip
+[ 22:27:25 ] [ DEBUG ] > Attempting to confirm cookies
+[ 22:27:25 ] [ OK ] > Cookies confirmed [ Cookies list: ( [] ) ]
+[ 22:27:25 ] [ DEBUG ] > Attempting to redirect to signup page
+[ 22:27:33 ] [ DEBUG ] > Attempting to register on https://www.instagram.com/
+[ 22:27:33 ] [ INFO ] > Attempting to insert Phone Number
+[ 22:27:33 ] [ INFO ] > Attempting to insert Name
+[ 22:27:33 ] [ INFO ] > Attempting to insert Username
+[ 22:27:33 ] [ INFO ] > Attempting to insert Password
+[ 22:27:33 ] [ INFO ] > Attempting to click signup button
+[ 22:27:33 ] [ CRITICAL ] > Unable to insert phone number
+[ 22:27:33 ] [ CRITICAL ] > Unable to insert name
+[ 22:27:33 ] [ CRITICAL ] > Unable to insert username
+[ 22:27:33 ] [ CRITICAL ] > Unable to insert password
+[ 22:27:55 ] [ INFO ] > Welcome to InstaGen | Enjoy A Lot Of Features For Free With WieszakWare #FUTURE24 Special Edition
+[ 22:27:55 ] [ INFO ] > Application Version: [ TEST 1.0.2 ]
+[ 22:27:55 ] [ INFO ] > For more info / help visit our webisite! | 'https://wieszakware.rf.gd'
+[ 22:27:55 ] [ WARNING ] > Application is not stable for now! | Some features will not work!
+[ 22:27:55 ] [ INFO ] > If you have any questions please contact me on DM | Wieszak#0384
+[ 22:27:55 ] [ SUCCESS ] > Successfully executed with status code [ 200 ]
+[ 22:28:16 ] [ WARNING ] > Use Proxies turned off
+[ 22:28:16 ] [ OK ] > Number of accounts accepted
+[ 22:28:16 ] [ OK ] > Phone Number Accepted
+[ 22:28:16 ] [ SUCCESS ] > Name Accepted
+[ 22:28:16 ] [ DEBUG ] > Getting username from .input\usernames.txt
+[ 22:28:16 ] [ WARNING ] > GetUsername returned an error: [ .input\usernames.txt file is empty ]
+[ 22:28:16 ] [ INFO ] > Generating username...
+[ 22:28:16 ] [ SUCCESS ] > Generated wL2Y4zdKGIz7jWJSwH1mb26f
+[ 22:28:16 ] [ SUCCESS ] > Password Accepted
+[ 22:28:16 ] [ INFO ] > Accepted Actions :> [32m[ 6 ]
+[ 22:28:16 ] [ INFO ] > Data: [ ACCNumber: 1 ] [ PhoneNum: +48 732 087 418 ] [ Name: hash ] [ Username: wL2Y4zdKGIz7jWJSwH1mb26f ] [ Password: wieszakisthbeest ] [ Proxy: None ]
+[ 22:28:16 ] [ WARNING ] > This generator requires "high quality" proxies!
+[ 22:28:17 ] [ DEBUG ] > Attempting to start webdriver
+[ 22:28:23 ] [ SUCCESS ] > Webdriver Started with proxy [ None ]
+[ 22:28:23 ] [ DEBUG ] > Current user agent: [ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 ]
+[ 22:28:23 ] [ INFO ] > Successfully yoinked ip
+[ 22:28:23 ] [ DEBUG ] > Attempting to confirm cookies
+[ 22:28:24 ] [ OK ] > Cookies confirmed [ Cookies list: ( [] ) ]
+[ 22:28:24 ] [ DEBUG ] > Attempting to redirect to signup page
+[ 22:28:32 ] [ CRITICAL ] > Unable to redirect to signup page
+[ 22:28:40 ] [ CRITICAL ] > Unable to redirect to signup page
+[ 22:28:47 ] [ DEBUG ] > Attempting to register on https://www.instagram.com/accounts/emailsignup/
+[ 22:28:47 ] [ INFO ] > Attempting to insert Phone Number
+[ 22:28:47 ] [ INFO ] > Attempting to insert Name
+[ 22:28:47 ] [ INFO ] > Attempting to insert Username
+[ 22:28:47 ] [ INFO ] > Attempting to insert Password
+[ 22:28:47 ] [ INFO ] > Attempting to click signup button
+[ 22:28:47 ] [ SUCCESS ] > Phone Number inserted successfully
+[ 22:28:47 ] [ SUCCESS ] > Name inserted successfully
+[ 22:28:47 ] [ SUCCESS ] > Username inserted successfully
+[ 22:28:47 ] [ OK ] > Continue button clicked
+[ 22:28:52 ] [ INFO ] > Enter Confirmation code sent to [ +48 732 087 418 ]
+[ 22:28:52 ] [ INFO ] > Please enter your confirmation code
+[ 22:28:57 ] [ DEBUG ] > Came to loop
+[ 22:28:57 ] [ DEBUG ] > Not passed, trying again
+[ 22:28:59 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:01 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:03 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:05 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:07 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:09 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:11 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:13 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:15 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:17 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:19 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:21 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:23 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:25 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:27 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:29 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:31 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:33 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:35 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:37 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:39 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:41 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:43 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:45 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:47 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:49 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:51 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:53 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:55 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:57 ] [ DEBUG ] > Not passed, trying again
+[ 22:29:59 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:01 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:03 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:05 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:08 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:10 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:12 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:14 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:16 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:18 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:20 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:22 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:24 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:26 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:28 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:30 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:32 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:34 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:36 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:38 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:40 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:42 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:44 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:46 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:48 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:50 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:52 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:54 ] [ DEBUG ] > Not passed, trying again
+[ 22:30:56 ] [ DEBUG ] > Not passed, trying again

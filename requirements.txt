@@ -1,0 +1,7 @@
+instagrapi
+selenium
+PyQt5
+colorama
+selenium-wire
+asyncio
+urllib
