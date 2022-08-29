@@ -258,16 +258,6 @@ class Features():
         agent = driver.execute_script("return navigator.userAgent")
         p.debug(f"Current user agent: [ {agent} ]")
 
-        try:
-            ippp = urllib.request.Request("http://ipinfo.io/json")
-            ippp.set_proxy(str(Proxy), 'http')
-            response = urllib.request.urlopen("http://ipinfo.io/json")
-            #print(response.read().decode('utf8'))
-            #p.info(f"Getting IP address info: [ {response.read().decode()} ]")
-            p.info(f"Successfully yoinked ip")
-        except Exception as e:
-            p.warning(f"Unable to get your ip address")
-
         #time.sleep(4)
         p.debug("Attempting to confirm cookies")
         
