@@ -7,7 +7,7 @@
 ▶ WARNING! Before using WieszakWare check our YouTube Video!
 ▶ Link: Cooming Soon
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-▶ If you have any questions or problem please join our WieszakWare Discord Server [ https://wieszakware.rf.gd click discord in navigation bar ]
+▶ If you have any questions or problem please join our WieszakWare Discord Server [ https://wieszakware.epizy.com click discord in navigation bar ]
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ▶ WieszakWare 2022 <<<
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
