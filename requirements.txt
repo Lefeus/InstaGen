@@ -5,3 +5,4 @@ colorama
 selenium-wire
 asyncio
 urllib
+psutil
