@@ -4,7 +4,7 @@ PyQt5
 colorama
 selenium-wire
 asyncio
-urllib
+urllib3
 psutil
 progressbar
 PyInstaller
