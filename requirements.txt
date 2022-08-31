@@ -6,3 +6,6 @@ selenium-wire
 asyncio
 urllib
 psutil
+progressbar
+PyInstaller
+gitpython
