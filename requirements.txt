@@ -1,0 +1,11 @@
+instagrapi
+selenium
+PyQt5
+colorama
+selenium-wire
+asyncio
+psutil
+urllib3
+progressbar
+PyInstaller
+rich
