@@ -98,6 +98,6 @@ Now everytime you want to launch InstaGen from source you have to type following
 cd ~/Desktop/InstaGen && venv/bin/activate && python main.py && venv/bin/deactivate
 ```
 
-WieszakWare 2022, Licensed under [GPL V2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt)
-[YouTube Wieszak](https://youtube.com/c/WieszakXD)
+WieszakWare 2022, Licensed under [GPL V2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt)  
+[YouTube Wieszak](https://youtube.com/c/WieszakXD)  
 [Instagram @wieszakyt](http://instagram.com/wieszakyt)
