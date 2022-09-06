@@ -4,42 +4,53 @@ import os
 ### Zapis ostatniej sesji (chodzi o menu)
 
 ### Import bibliotek
+try:
+    import urllib.request
+    import datetime
+    import sys
+    from instagrapi import Client
+    import time
+    import asyncio
+    import random
+    import base64
+    import webbrowser
+    import threading
+    import easygui
+    import multiprocessing
+    from progressbar import *
+    import json
+    from functools import cache
+    import pyautogui
+    import psutil
+    from pystyle import Colorate , Colors # TODO: Pystyle
+    import rich.table
+    import rich
+    from configparser import ConfigParser
+    import ctypes
+    #from tqdm import tqdm
+    #from joblib import Parallel, delayed
+    import math
+    import pwinput # TODO: PASSWORD INPUT
+    import shutil
+    import subprocess
+    from colorama import Fore, Back, Style, init
+    import string
+    from getpass import getpass
+    from PyQt5.uic import loadUi
+    from PyQt5.QtGui import QIcon
+    from PyQt5 import QtWidgets, QtCore, QtGui
+    from PyQt5.QtWidgets import QDialog, QApplication, QWidget, QStackedWidget, QMainWindow
+    from seleniumwire import webdriver
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.support.ui import WebDriverWait 
+    from selenium.webdriver.common.keys import Keys
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.select import Select
+except Exception as e:
+    print(f"[ ERROR ] Unable to import libraries | Exception: [{e}]")
 
-import urllib.request
-import datetime
-import sys
-import time
-import asyncio
-import random
-import threading
-import multiprocessing
-from progressbar import *
-import json
-import pyautogui
-import psutil
-import rich.table
-import rich
-from configparser import ConfigParser
-import ctypes
-#from tqdm import tqdm
-#from joblib import Parallel, delayed
-import math
-import shutil
-import subprocess
-from colorama import Fore, Back, Style, init
-import string
-from getpass import getpass
-from PyQt5.uic import loadUi
-from PyQt5 import QtWidgets, QtCore, QtGui
-from PyQt5.QtWidgets import QDialog, QApplication, QWidget, QStackedWidget, QMainWindow
-from seleniumwire import webdriver
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait 
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.select import Select
+#init(autoreset=True)
 
-init(autoreset=True)
 
 
 # Convert to EXE
@@ -49,8 +60,6 @@ init(autoreset=True)
 
 
 ### TODO: Download Seleniumwire Cert-------------------
-### XXX GITPYTHON MODULE
-
 
 if os.path.exists(f"{os.path.join(os.getenv('temp'), '.seleniumwire')}") == True:
     pass
@@ -68,7 +77,7 @@ else:
             sys.exit()
     else:
         ctypes.windll.kernel32.SetConsoleTitleW(f'''WieszakWare InstaGen | Download''')
-        print(Style.BRIGHT + fr"""
+        print(Colorate.Vertical(Colors.cyan_to_green, r"""
 
                         ▓█████▄  ▒█████   █     █░███▄    █  ██▓     ▒█████   ▄▄▄      ▓█████▄ 
                         ▒██▀ ██▌▒██▒  ██▒▓█░ █ ░█░██ ▀█   █ ▓██▒    ▒██▒  ██▒▒████▄    ▒██▀ ██▌
@@ -80,7 +89,7 @@ else:
                         ░ ░  ░ ░ ░ ░ ▒    ░   ░    ░   ░ ░   ░ ░   ░ ░ ░ ▒    ░   ▒    ░ ░  ░ 
                         ░        ░ ░      ░            ░     ░  ░    ░ ░        ░  ░   ░    
                         ░                                                              ░           
-""")
+""",1))
         print(Fore.LIGHTCYAN_EX + f"[ SETUPWARNING.EXE ] WIESZAKWARE SETUP STARTED | WELCOME {os.getlogin()}")
         actiondownloadgit = input("[ INPUT ] Is git-scm installed on your computer? [ TYPE 'No' FOR AUTO DOWNLOAD or type 'Yes' if you have git installed on your pc ] :>").capitalize()
         if actiondownloadgit == "No":
@@ -104,8 +113,6 @@ else:
             print("[ LOG ] Waiting for download!")
             time.sleep(3)
             print("[ LOG ] Successfull!")
-            print(Fore.BLUE + "[ INFO ] Attemting to get cursor position")
-            print(Fore.LIGHTMAGENTA_EX + "[ CURSOR ] Position [ {} ]".format(pyautogui.position()))
             try:
                 os.startfile(os.path.join(os.getcwd(), "downloaded_git.exe"))
                 print(Fore.GREEN + "[ SYSTEM ] GIT SETUP STARTED")
@@ -149,7 +156,8 @@ else:
 ### Informacje
 __info__ = {
     "appname": "InstaGen",
-    "version": "Release 1.0.7",
+    "version": "Release 1.0.6.4",
+    "lastupdate": "6.09.2022",
     "logspath": os.path.join(os.getcwd(), "logs", "logs.log"),
     ".ui-file-path": os.path.join(os.getcwd(), "ui", "ui_main.ui"),
     "input-path": lambda filename: os.path.join("input", f"{filename}"),
@@ -189,18 +197,17 @@ def checkproperties():
             counter += 1
             invalid += 1
     if valid == 5:
-        print(Style.BRIGHT + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ] " + Fore.GREEN + F'[ ACCEPTED ] All properties valid! ( Valid properties: [ {valid} ] ) ( Invalid properties: [ {invalid} ] ) ( All:  {counter})')
+        print(Style.RESET_ALL + Style.BRIGHT + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ] " + Fore.GREEN + F'[ ACCEPTED ] All properties valid! ( Valid properties: [ {valid} ] ) ( Invalid properties: [ {invalid} ] ) ( All:  {counter})')
     else:
         ### Hasło nieprawidłowe
-        print(Style.BRIGHT + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ] " + Fore.RED + F'[ NOT ACCEPTED PASSWORD REQUIRED ] Enter Special Password! ( Valid properties: [ {valid} ] ) ( Invalid properties: [ {invalid} ] ) ( All:  {counter})')
-        specialpassword = getpass(">>>")
+        specialpassword = pwinput.pwinput(Style.RESET_ALL + Style.BRIGHT + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ] " + Fore.RED + F'[ NOT ACCEPTED | PASSWORD AUTHENTICATION REQUIRED ]( Valid properties: [ {valid} ] ) ( Invalid properties: [ {invalid} ] ) ( All:  {counter})\n[ AUTHENTICATOR ] Enter Special Password :> ', mask="*")
         max_retries = 0
         used_retries = 0
         if specialpassword ==  __info__["special-password"]:
-            print(Style.BRIGHT + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ] " + Fore.GREEN + F'[ PASSWORD ACCEPTED ] Valid Password')
+            print(Style.RESET_ALL + Style.BRIGHT + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ] " + Fore.GREEN + F'[ PASSWORD ACCEPTED ] Valid Password')
             return True
         else:
-            print(Style.BRIGHT + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ] " + Fore.RED + F'[ PASSWORD NOT ACCEPTED ] Invalid Password')
+            print(Style.RESET_ALL + Style.BRIGHT + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ] " + Fore.RED + F'[ PASSWORD NOT ACCEPTED ] Invalid Password')
             return False
             
             
@@ -230,26 +237,27 @@ class Print():
         
         self.AllowDebug = True
 
+    @cache
     def info(self, text: str = None, end: str = None) -> None:
         try:
             with open(file=f"{__info__['logspath']}", mode="a+") as logfile:
                 logfile.write(f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + "[ INFO ] >" + " " + f"{text}" + "\n")
                 logfile.close()
         except Exception as e:
-            print(self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
-        print(self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Info + "[ INFO ] >" + " " + f"{text}", end=end)
+            print(Style.RESET_ALL + self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
+        print(Style.RESET_ALL + self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Info + "[ INFO ] >" + " " + f"{text}", end=end)
 
-
+    @cache
     def warning(self, text: str = None, end: str = None) -> None:
         try:
             with open(file=f"{__info__['logspath']}", mode="a+") as logfile:
                 logfile.write(f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + "[ WARNING ] >" + " " + f"{text}" + "\n")
                 logfile.close()
         except Exception as e:
-            print(self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
-        print(self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Warning + "[ WARNING ] >" + " " + f"{text}", end=end)
+            print(Style.RESET_ALL + self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
+        print(Style.RESET_ALL + self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Warning + "[ WARNING ] >" + " " + f"{text}", end=end)
 
-
+    @cache
     def debug(self, text: str = None, end: str = None, allowdebug: bool = True) -> None:
         if allowdebug == False:
             return
@@ -258,57 +266,58 @@ class Print():
                 logfile.write(f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + "[ DEBUG ] >" + " " + f"{text}" + "\n")
                 logfile.close()
         except Exception as e:
-            print(self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
-        print(self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Debug + "[ DEBUG ] >" + " " + f"{text}", end=end)
+            print(Style.RESET_ALL + self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
+        print(Style.RESET_ALL + self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Debug + "[ DEBUG ] >" + " " + f"{text}", end=end)
 
-
+    @cache
     def critical(self, text: str = None, end: str = None) -> None:
         try:
             with open(file=f"{__info__['logspath']}", mode="a+") as logfile:
                 logfile.write(f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + "[ CRITICAL ] >" + " " + f"{text}" + "\n")
                 logfile.close()
         except Exception as e:
-            print(self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
-        print(self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Critical + "[ CRITICAL ] >" + " " + f"{text}", end=end)
+            print(Style.RESET_ALL + self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
+        print(Style.RESET_ALL + self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Critical + "[ CRITICAL ] >" + " " + f"{text}", end=end)
 
-
+    @cache
     def error(self, text: str = None, end: str = None) -> None:
         try:
             with open(file=f"{__info__['logspath']}", mode="a+") as logfile:
                 logfile.write(f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + "[ CRITICAL ] >" + " " + f"{text}" + "\n")
                 logfile.close()
         except Exception as e:
-            print(self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
-        print(self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Error + "[ ERROR ] >" + " " + f"{text}", end=end)
+            print(Style.RESET_ALL + self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
+        print(Style.RESET_ALL + self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Error + "[ ERROR ] >" + " " + f"{text}", end=end)
 
-
+    @cache
     def ok(self, text: str = None, end: str = None) -> None:
         try:
             with open(file=f"{__info__['logspath']}", mode="a+") as logfile:
                 logfile.write(f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + "[ OK ] >" + " " + f"{text}" + "\n")
                 logfile.close()
         except Exception as e:
-            print(self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
-        print(self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Ok + "[ OK ] >" + " " + f"{text}", end=end)
+            print(Style.RESET_ALL + self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
+        print(Style.RESET_ALL + self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Ok + "[ OK ] >" + " " + f"{text}", end=end)
 
-    
+    @cache
     def success(self, text: str = None, end: str = None) -> None:
         try:
             with open(file=f"{__info__['logspath']}", mode="a+") as logfile:
                 logfile.write(f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + "[ SUCCESS ] >" + " " + f"{text}" + "\n")
                 logfile.close()
         except Exception as e:
-            print(self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
-        print(self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Success + "[ SUCCESS ] >" + " " + f"{text}", end=end)
+            print(Style.RESET_ALL + self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
+        print(Style.RESET_ALL + self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.Success + "[ SUCCESS ] >" + " " + f"{text}", end=end)
 
+    @cache
     def hardwareinfo(self, text: str = None, end: str = None) -> None:
         try:
             with open(file=f"{__info__['logspath']}", mode="a+") as logfile:
                 logfile.write(f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + "[ HWINFO ] >" + " " + f"{text}" + "\n")
                 logfile.close()
         except Exception as e:
-            print(self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
-        print(self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.HARDWAREINFO + "[ HWINFO ] >" + " " + f"{text}", end=end)
+            print(Style.RESET_ALL + self.Error + f"There was an error | Exception Found: [ {e} ] | ERROR: dir not exists / file not exists | Fix: [ Create 'logs' folder ]")
+        print(Style.RESET_ALL + self.Time + f"[ {datetime.datetime.now().strftime('%H:%M:%S')} ]" + " " + self.HARDWAREINFO + "[ HWINFO ] >" + " " + f"{text}", end=end)
 
 
 p = Print()
@@ -323,8 +332,56 @@ p = Print()
 class Features():
     def __init__(self):
         super(Features, self).__init__()
-        self.none = None
         
+        self.client = Client()
+
+        
+
+
+
+    async def followbot(self, usr_to_follow: str, bots: list, proxy: str = None, use_proxy: bool = False):
+        for bot in bots:
+            accusername, accpassword = str(bot).split(":")
+            if use_proxy == True:
+                p.debug(f"Connecting to proxy: [ {proxy} ]")
+                try:
+                    self.client.set_proxy(proxy)
+                    p.ok(f"Proxy Connected [ {proxy} ]")
+                except Exception as e:
+                    p.warning(f"Unable to connect to proxy: [ {proxy} ]")
+            else:
+                p.warning("Proxies turned off!")
+            #readinstagrapipassandusername = open(os.path.join(os.getcwd(), "input", "BOTS.txt"), "r+").read()
+            #accusername, accpassword = readinstagrapipassandusername.split(":")
+            p.info("Attemting to login")
+            try:
+                self.client.login(accusername, accpassword)
+                p.ok(f"Successfully Logged in as {accusername[:-2]}" + "**")
+            except Exception as e:
+                p.critical(f"Unable to login as [ {accusername} ] | Exception: {e}")
+            try:
+                user_id = self.client.user_id_from_username(username=usr_to_follow)
+                self.client.user_follow(user_id)
+                p.ok(f"Successfully followed [ {usr_to_follow} ]")
+            except Exception as e:
+                p.critical(f"Unable to follow [ {usr_to_follow} ] | Exception: {e}")
+            try:
+                self.client.logout()
+                p.success("Successfully logged out")
+            except Exception as e:
+                p.error(f"Unable to log out. | Exception: {e}")
+
+            continue
+            
+        
+
+
+
+
+
+
+
+
     ### XXX Stwórz konto instagram - Phone 
     async def CREATOR_PHONE(self, Account_Number: int, Phone_Number: str, Name: str, Username: str, Password: str, Proxy: str, use_proxy: bool = False):
         p.debug("Attemting to find chrome binaries...")
@@ -534,7 +591,7 @@ class Features():
         p.debug("Came to loop")
         try:
             while driver.find_element(By.CSS_SELECTOR, "#react-root > section > main > div > div > div:nth-child(1) > div > div > div > form > div.TfHme > div > label > input").is_displayed():
-                p.debug("Not passed, trying again")
+                p.debug("Not passed, trying again", end="\r")
                 await asyncio.sleep(2)
         except:
             pass
@@ -549,7 +606,7 @@ class Features():
         }
 
 
-        with open(os.path.join(os.getcwd(), "created", "accounts.json"), "a", encoding="utf-8") as savedata:
+        with open(os.path.join(os.getcwd(), "output", "accounts.json"), "a", encoding="utf-8") as savedata:
             json.dump(jsonaccount, savedata, indent=4)
             savedata.write("\n")
             savedata.close()
@@ -587,10 +644,6 @@ class Features():
         #driver.find_element(By.XPATH, "/html/body/div[1]/section/main/div/div/div[1]/div[2]/form/div[6]/div/label/input").send_keys("Password")
 
         
-
-
-
-
 
 
 
@@ -809,7 +862,7 @@ class Features():
 
         try:
             while driver.find_element(By.CSS_SELECTOR, "#react-root > section > main > div > div > div:nth-child(1) > div.qF0y9.Igw0E.IwRSH.eGOV_.acqo5._4EzTm > form > div > div:nth-child(1) > input").is_displayed():
-                p.debug("Not passed, trying again", end="\r", allowdebug=True)
+                p.debug("Not passed, trying again", end="\r")
                 await asyncio.sleep(2)
             else:
                 p.success("Code Received!")
@@ -827,7 +880,7 @@ class Features():
 
         
 
-        with open(os.path.join(os.getcwd(), "created", "accounts.json"), "a", encoding="utf-8") as savedata:
+        with open(os.path.join(os.getcwd(), "output", "accounts.json"), "a", encoding="utf-8") as savedata:
             json.dump(jsonaccount, savedata, indent=4)
             savedata.write("\n")
             savedata.close()
@@ -851,8 +904,31 @@ class Features():
 
 
 
+#########################
+tempproxycountlist = set()
+for line in open(os.path.join(os.getcwd(), "input", f"proxies.txt"), "r+").readlines(): tempproxycountlist.add(line)
+countproxy = len(list(tempproxycountlist))
 
 
+tempnameslist = set()
+for line in open(os.path.join(os.getcwd(), "input", f"names.txt"), "r+").readlines(): tempnameslist.add(line)
+countnames = len(list(tempnameslist))
+
+
+tempusernameslist = set()
+for line in open(os.path.join(os.getcwd(), "input", f"usernames.txt"), "r+").readlines(): tempusernameslist.add(line)
+countusernames = len(list(tempusernameslist))
+
+
+temppasswordslist = set()
+for line in open(os.path.join(os.getcwd(), "input", f"passwords.txt"), "r+").readlines(): temppasswordslist.add(line)
+countpasswords = len(list(temppasswordslist))
+
+
+tempBOTSlist = set()
+for line in open(os.path.join(os.getcwd(), "input", f"BOTS.txt"), "r+").readlines(): tempBOTSlist.add(line)
+countBOTS = len(list(tempBOTSlist))
+##########################
 
 
 
@@ -862,13 +938,15 @@ class Features():
 
 
 class APP(QMainWindow):
+     @cache
      def __init__(self):
         super(APP, self).__init__()
         loadUi(__info__[".ui-file-path"], self)
 
         self.show()
 
-        self.setWindowTitle(f'{__info__["appname"]} | {__info__["version"]}')
+
+        self.setWindowTitle(f'{__info__["appname"]} | {__info__["version"]} | Last Update: [ {__info__["lastupdate"]} | Proxies Loaded: [ {countproxy} ] | Names Loaded: [ {countnames} ] | Usernames Loaded: [ {countusernames} ] | Passwords Loaded: [ {countpasswords} ] | BOTS: [ {countBOTS} ]')
 
         self.setWindowIcon(QtGui.QIcon('ext/#instagram.png'))
 
@@ -884,35 +962,50 @@ class APP(QMainWindow):
 
         self.btn_accgen_email.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_accgen_email))
 
-
         self.btn_likebot.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_likebot))
 
         self.btn_followbot.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_followbot))
 
         self.btn_settings.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_settings))
 
+        
+        # TODO: LINKS: | GitHub: https://github.com/WieszakWare/InstaGen | Youtube : https://youtube.com/c/WieszakXD | Discord: https://discord.gg/KCqrbVgSBF
+        self.btn_github.clicked.connect(lambda: webbrowser.open("https://github.com/WieszakWare/InstaGen"))
+        self.btn_discord.clicked.connect(lambda: webbrowser.open("https://discord.gg/KCqrbVgSBF"))
+        self.btn_youtube.clicked.connect(lambda: webbrowser.open("https://youtube.com/c/WieszakXD"))
 
 ##################################################################################################################################################################################################
-# TODO Cooming soon! Button Icons insead of labels.
-# self.printButton.setIcon(QtGui.QIcon('printer.tif'))
 
 
-
-
+        self.btn_followbot_loadbots.clicked.connect(lambda: loadbots(self))
 
 
 
 ##################################################################################################################################################################################################
 # NOTE Auto Check Use Proxy ACCGEN - PHONE, Settings
+        Loaded_Bots = set()
 
-        
+
+        def loadbots(self):
+            file = easygui.fileopenbox(msg="Path to your instabots file [ Allowed format: username:password ]", title="Path to your instagram accounts", default=os.path.join(os.getcwd(), "input", "BOTS.txt"))
+            if file == None:
+                file = os.path.join(os.getcwd(), "input", "BOTS.txt")
+                return file
+            else:
+                p.info("File Loaded Successfully! : " + file)
+                with open(file=f"{file}", mode="r+") as readaccounts:
+                    for line in readaccounts.readlines():
+                        Loaded_Bots.add(line.replace("\n", ""))
+                    p.success("Loaded Instagram Accounts [ Encoded ] :> " + f"""{base64.b32encode(f"{list(Loaded_Bots)}".encode(encoding="utf-32"))}""")
+                    readaccounts.close()
+                return file
         
                 
         
       
 
 
-        def checkboxrefresh(self):
+        def refresh(self):
             try:
                 checkboxstate = parser.getboolean('Settings', 'use_proxy')
                 p.ok(f"Default checkbox value: [ settings.config ], [ {bool(checkboxstate)} ] ")
@@ -920,6 +1013,7 @@ class APP(QMainWindow):
                 self.sett_checkbtn_getproxystatus.setChecked(bool(checkboxstate))
                 self.accgenemail_checkbox_proxy.setChecked(bool(checkboxstate))
                 self.sett_textedit_proxytype.setPlainText(parser.get("Settings", "proxytype"))
+                self.checkbox_followbot_useproxy.setChecked(bool(checkboxstate))
                 return bool(checkboxstate)
             except Exception as e:
                 p.error(f"Unable to get checkbox state. Please check settings.config file and try again. | {e}")
@@ -947,7 +1041,7 @@ class APP(QMainWindow):
                 parser.write(configfile)
             try:
                 p.success(f"Checkbox refreshed successfully!")
-                checkboxrefresh(self)
+                refresh(self)
             except Exception as e:
                 p.error(f"Unable to refresh checkbox! | Exception Found: [ {e} ]")
 
@@ -968,7 +1062,7 @@ class APP(QMainWindow):
 
 ##################################################################################################################################################################################################
 # NOTE: Automaticly refresh checkboxes
-        checkboxrefresh(self)
+        refresh(self)
 ##################################################################################################################################################################################################
 
         # NOTE Functions to accgen email / phone
@@ -1343,6 +1437,39 @@ class APP(QMainWindow):
         self.btn_startfuture24.clicked.connect(lambda: getall_phone(self))
         self.accgenemail_pushbutton_start.clicked.connect(lambda: getall_email(self))
 
+        def startfollowbot_check(self):
+
+            _useproxy = True if self.checkbox_followbot_useproxy.isChecked() == True else False
+
+            def loadproxy():
+                accepted_actions = 0
+                proxylist = set()
+                proxyfilesize = os.path.getsize(__info__["input-path"]("proxies.txt"))
+                if _useproxy == True:
+                    if proxyfilesize != 0:
+                        with open(__info__["input-path"]("proxies.txt")) as getproxy:
+                            for line in getproxy:
+                                proxylist.add(line)
+                        p.ok(f'{__info__["input-path"]("proxies.txt")}')
+                        accepted_actions += 1
+                        return str(random.choice(list(proxylist)))
+                    else:
+                        p.critical(f'Proxy list is empty! | Please insert proxies in {__info__["input-path"]("proxies.txt")}')
+                else:
+                    p.warning("Use Proxies turned off")
+                    accepted_actions += 1
+                    return None
+
+            if self.plaintextedit_followbot_username.toPlainText() == "":
+                p.error(f"Unable to accept username [ Username :> [ {self.plaintextedit_followbot_username.toPlainText()} ] ] [ Username cant be none ]")
+            elif list(Loaded_Bots) == []:
+                p.error("Bots not loaded! | Please load your bots!")
+            else:
+                asyncio.run(Features().followbot(usr_to_follow=f"{self.plaintextedit_followbot_username.toPlainText()}", bots=list(Loaded_Bots), proxy=loadproxy() , use_proxy=bool(self.checkbox_followbot_useproxy.isChecked())))
+
+
+        self.btn_followbot_startfollowbot.clicked.connect(lambda: startfollowbot_check(self))
+
 #######################################################################################################################################################################
 
 
@@ -1350,17 +1477,10 @@ class APP(QMainWindow):
 
 
 
+ 
 
 
-
-
-class InstaBot:
-    def __init__(self) -> None:    
-        self.none = None
-
-
-
-logo = fr"""
+logo = r"""
                         ██▓ ███▄    █   ██████ ▄▄▄█████▓ ▄▄▄        ▄████ ▓█████  ███▄    █ 
                         ▓██▒ ██ ▀█   █ ▒██    ▒ ▓  ██▒ ▓▒▒████▄     ██▒ ▀█▒▓█   ▀  ██ ▀█   █ 
                         ▒██▒▓██  ▀█ ██▒░ ▓██▄   ▒ ▓██░ ▒░▒██  ▀█▄  ▒██░▄▄▄░▒███   ▓██  ▀█ ██▒
@@ -1375,7 +1495,7 @@ logo = fr"""
 # TODO: Wytabowałem logo aby łatwiej zobaczyć logo
 
 if __name__ == "__main__":
-    print(Style.BRIGHT + logo)
+    print(Colorate.Vertical(Colors.red_to_purple, logo,1))
     p.info(f"Welcome to {__info__['appname']} | Enjoy A Lot Of Features For Free With WieszakWare InstaGen!")
     p.info(f"Application Version: [ {__info__['version']} ]")
     p.info(f"For more info / help visit our webisite! | 'https://wieszakware.epizy.com'")
@@ -1403,7 +1523,6 @@ if __name__ == "__main__":
             p.hardwareinfo(f"Logical CPU: [ {[psutil.cpu_count()]} ]")
             p.hardwareinfo(f"CPU Frequency: {[psutil.cpu_freq()]}")
             p.hardwareinfo(f"CPU Times: {[psutil.cpu_times()[0]]}")
-            conf["use_proxy"] = True
 
             try:
                 sys.exit(app.exec_())
