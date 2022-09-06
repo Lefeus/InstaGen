@@ -143,7 +143,7 @@ border: 0px solid;</string>
          <widget class="QLabel" name="logo">
           <property name="geometry">
            <rect>
-            <x>710</x>
+            <x>720</x>
             <y>0</y>
             <width>201</width>
             <height>41</height>
@@ -158,10 +158,128 @@ border: 0px solid;</string>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: lightblue;border: none</string>
+           <string notr="true">color: gray;
+border: none;</string>
           </property>
           <property name="text">
            <string>I N S T A G E N</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_github">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>101</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+}
+QPushButton:hover {
+	background-color: red;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>github.png</normaloff>github.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_discord">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>0</y>
+            <width>101</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+}
+QPushButton:hover {
+	background-color: red;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>discord.png</normaloff>discord.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_youtube">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>0</y>
+            <width>101</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+}
+QPushButton:hover {
+	background-color: red;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>youtube.png</normaloff>youtube.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
           </property>
          </widget>
         </widget>
@@ -330,7 +448,59 @@ Bot</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignTop">
+          <item>
+           <widget class="QPushButton" name="btn_menu_encrypt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+            </property>
+            <property name="text">
+             <string>Encrypt</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_menu_decrypt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+            </property>
+            <property name="text">
+             <string>Decrypt</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QFrame" name="frame_top_menus">
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
@@ -377,7 +547,17 @@ QPushButton:hover {
 }</string>
             </property>
             <property name="text">
-             <string>Settings</string>
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>settings.png</normaloff>settings.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -393,10 +573,10 @@ QPushButton:hover {
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_5">
-          <item>
+          <item alignment="Qt::AlignHCenter">
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>3</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="page_accgen_phone">
              <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -728,19 +908,173 @@ QPushButton:hover {
              <layout class="QVBoxLayout" name="verticalLayout_7">
               <item>
                <widget class="QLabel" name="label_2">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>80</height>
+                 </size>
+                </property>
                 <property name="font">
                  <font>
-                  <pointsize>40</pointsize>
+                  <family>Impact</family>
+                  <pointsize>48</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">color: #FFF;</string>
                 </property>
                 <property name="text">
-                 <string>Follow Bot</string>
+                 <string>InstaGen FollowBot [ Universal ]</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_16">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color:yellow;</string>
+                </property>
+                <property name="text">
+                 <string>Welcome to FollowBot! PLEASE NOTE!: BEFORE USING FOLLOWBOT PLEASE PUT YOUR BOTS [YOUR INSTAGRAM ACCOUNTS] IN input/BOTS.txt format: username:password</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_17">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Arial Black</family>
+                  <pointsize>16</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: white;</string>
+                </property>
+                <property name="text">
+                 <string>Enter FollowBot Target Username! [ Username ] [ String ]</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="plaintextedit_followbot_username">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>55</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Arial</family>
+                  <pointsize>28</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: white;background-color:black;</string>
+                </property>
+                <property name="plainText">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_followbot_loadbots">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+              background-color: black;
+              color: white;
+              font: bold 12px;}
+
+QPushButton:pressed {
+        	  background-color: black;
+			  color: red;}
+QPushButton:hover {
+              background-color: white;
+			  color: black;}
+</string>
+                </property>
+                <property name="text">
+                 <string>Load Your Bots! [ Default input/BOTS.txt ]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkbox_followbot_useproxy">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox
+{
+    spacing: 5px;
+    outline: none;
+    color: #bbb;
+    margin-bottom: 2px;
+}
+
+QCheckBox::indicator:unchecked:pressed
+{
+background-color : green;
+}
+
+QCheckBox::indicator:checked:pressed
+{
+background-color : red;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Use Proxy from input/proxies.txt file [ RECOMMENDED! ]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_followbot_startfollowbot">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+              background-color: black;
+              color: white;
+              border-style: outset;
+              padding: 2px;
+              font: bold 12px;
+              border-width: 6px;
+              border-radius: 10px;
+              border-color: white; }
+
+QPushButton:pressed {
+        	  background-color: darkblue;}
+QPushButton:hover {
+              font-size: 16px;}
+</string>
+                </property>
+                <property name="text">
+                 <string>Start InstaGen FollowBot</string>
                 </property>
                </widget>
               </item>
@@ -749,17 +1083,39 @@ QPushButton:hover {
             <widget class="QWidget" name="page_likebot">
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <item>
-               <widget class="QLabel" name="label">
+               <widget class="QLabel" name="label_likebot">
                 <property name="font">
                  <font>
-                  <pointsize>40</pointsize>
+                  <pointsize>72</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: #FFF;</string>
+                 <string notr="true">color: gray;</string>
                 </property>
                 <property name="text">
                  <string>Like Bot</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="functioncoomingsoon">
+                <property name="font">
+                 <font>
+                  <family>Impact</family>
+                  <pointsize>24</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: gray;</string>
+                </property>
+                <property name="text">
+                 <string>This function is cooming soon!
+Wait for it!</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -932,7 +1288,7 @@ background-color: black;</string>
                  <string notr="true">color: white;</string>
                 </property>
                 <property name="text">
-                 <string>Enter Account Username [ default is a random name from passwords.txt file OR generated automaticly ]</string>
+                 <string>Enter Account Password [ default is a random name from passwords.txt file OR generated automaticly ]</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -1148,6 +1504,112 @@ QPushButton:hover {
                </widget>
               </item>
              </layout>
+            </widget>
+            <widget class="QWidget" name="page_encrypt">
+             <widget class="QLabel" name="label_18">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>851</width>
+                <height>101</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Impact</family>
+                <pointsize>72</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: gray;</string>
+              </property>
+              <property name="text">
+               <string>Encrypt</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_19">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>160</y>
+                <width>851</width>
+                <height>111</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Impact</family>
+                <pointsize>36</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: gray;</string>
+              </property>
+              <property name="text">
+               <string>This function is cooming soon!
+Please wait for it!</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page">
+             <widget class="QLabel" name="label_20">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>851</width>
+                <height>111</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Impact</family>
+                <pointsize>36</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: gray;</string>
+              </property>
+              <property name="text">
+               <string>This function is cooming soon!
+Please wait for it!</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_21">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>851</width>
+                <height>111</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Impact</family>
+                <pointsize>72</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: gray;</string>
+              </property>
+              <property name="text">
+               <string>Cooming Soon</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
             </widget>
            </widget>
           </item>
