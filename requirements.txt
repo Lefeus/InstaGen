@@ -8,4 +8,8 @@ psutil
 urllib3
 progressbar
 PyInstaller
+easygui
+crypto
+pwinput
+pystyle
 rich
