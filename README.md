@@ -101,3 +101,6 @@ cd ~/Desktop/InstaGen && venv/bin/activate && python main.py && venv/bin/deactiv
 WieszakWare 2022, Licensed under [GPL V2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt)  
 [YouTube Wieszak](https://youtube.com/c/WieszakXD)  
 [Instagram @wieszakyt](http://instagram.com/wieszakyt)
+
+![image](https://user-images.githubusercontent.com/111588764/191030856-8d1a0d80-b950-4530-b954-ba89402b599d.png)
+
