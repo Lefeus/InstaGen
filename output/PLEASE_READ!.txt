@@ -1,0 +1,25 @@
+____________________________________________________________________________________________________
+
+-------------------------------------------ABOUT ACCOUNTS-------------------------------------------
+____________________________________________________________________________________________________
+                                    { accounts.json } 
+Accounts Created Successfully without any Errors will be saved to accouts.json file.
+____________________________________________________________________________________________________
+                             { accounts_unknown_status.json }
+If you received this error 
+
+{ "Sorry, there was a problem. Please try again" 
+( or ) 
+"Sorry, something went wrong creating your account. Please try again soon."}
+
+Don't worry! It's only instagram bug.
+Your account has been created successfully. You can log in and the account will work.
+This may happen when: {
+    1. You are verifying instagram account by Phone Number
+}
+Try to log in into this account. 
+Accounts with this error will saved to accounts_unknown_status.json file!
+Thanks for reading!
+More info about this you can find on my website! https://wieszakware.42web.io
+____________________________________________________________________________________________________
+
