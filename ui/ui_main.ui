@@ -449,58 +449,6 @@ Bot</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="btn_menu_encrypt">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-	color: rgb(255, 255, 255);
-	background-color: rgb(35, 35, 35);
-	border: 0px solid;
-}
-QPushButton:hover {
-	background-color: rgb(85, 170, 255);
-}</string>
-            </property>
-            <property name="text">
-             <string>Encrypt</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="btn_menu_decrypt">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>20</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-	color: rgb(255, 255, 255);
-	background-color: rgb(35, 35, 35);
-	border: 0px solid;
-}
-QPushButton:hover {
-	background-color: rgb(85, 170, 255);
-}</string>
-            </property>
-            <property name="text">
-             <string>Decrypt</string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QFrame" name="frame_top_menus">
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
@@ -576,7 +524,7 @@ QPushButton:hover {
           <item alignment="Qt::AlignHCenter">
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="page_accgen_phone">
              <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -847,7 +795,6 @@ background-color : red;
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>-1</pointsize>
                   <weight>75</weight>
                   <italic>false</italic>
                   <bold>true</bold>
@@ -1378,6 +1325,32 @@ QPushButton:hover {
                 </property>
                </widget>
               </item>
+              <item>
+               <widget class="QLabel" name="label_22">
+                <property name="maximumSize">
+                 <size>
+                  <width>20000</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Black</family>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color:red</string>
+                </property>
+                <property name="text">
+                 <string>Account Suspended - Instagram Problem - https://wieszakware.42web.io/projects/instagen/account-suspended</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
              </layout>
             </widget>
             <widget class="QWidget" name="page_settings">
@@ -1505,112 +1478,8 @@ QPushButton:hover {
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="page_encrypt">
-             <widget class="QLabel" name="label_18">
-              <property name="geometry">
-               <rect>
-                <x>10</x>
-                <y>10</y>
-                <width>851</width>
-                <height>101</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <family>Impact</family>
-                <pointsize>72</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: gray;</string>
-              </property>
-              <property name="text">
-               <string>Encrypt</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-             <widget class="QLabel" name="label_19">
-              <property name="geometry">
-               <rect>
-                <x>0</x>
-                <y>160</y>
-                <width>851</width>
-                <height>111</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <family>Impact</family>
-                <pointsize>36</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: gray;</string>
-              </property>
-              <property name="text">
-               <string>This function is cooming soon!
-Please wait for it!</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </widget>
-            <widget class="QWidget" name="page">
-             <widget class="QLabel" name="label_20">
-              <property name="geometry">
-               <rect>
-                <x>10</x>
-                <y>150</y>
-                <width>851</width>
-                <height>111</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <family>Impact</family>
-                <pointsize>36</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: gray;</string>
-              </property>
-              <property name="text">
-               <string>This function is cooming soon!
-Please wait for it!</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-             <widget class="QLabel" name="label_21">
-              <property name="geometry">
-               <rect>
-                <x>10</x>
-                <y>10</y>
-                <width>851</width>
-                <height>111</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <family>Impact</family>
-                <pointsize>72</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: gray;</string>
-              </property>
-              <property name="text">
-               <string>Cooming Soon</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </widget>
+            <widget class="QWidget" name="new_page_unused2_2"/>
+            <widget class="QWidget" name="new_page_unused2"/>
            </widget>
           </item>
          </layout>
