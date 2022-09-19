@@ -10,32 +10,23 @@ try:
     import sys
     from instagrapi import Client
     import time
+    import hashlib
     import asyncio
     import random
     import base64
     import webbrowser
-    import threading
     import easygui
-    import multiprocessing
-    from progressbar import *
     import json
     from functools import cache
-    import pyautogui
     import psutil
     from pystyle import Colorate , Colors # TODO: Pystyle
-    import rich.table
-    import rich
     from configparser import ConfigParser
     import ctypes
-    #from tqdm import tqdm
-    #from joblib import Parallel, delayed
-    import math
     import pwinput # TODO: PASSWORD INPUT
     import shutil
     import subprocess
     from colorama import Fore, Back, Style, init
     import string
-    from getpass import getpass
     from PyQt5.uic import loadUi
     from PyQt5.QtGui import QIcon
     from PyQt5 import QtWidgets, QtCore, QtGui
@@ -48,6 +39,7 @@ try:
     from selenium.webdriver.support.select import Select
 except Exception as e:
     print(f"[ ERROR ] Unable to import libraries | Exception: [{e}]")
+    time.sleep(200)
 
 #init(autoreset=True)
 
@@ -56,6 +48,27 @@ except Exception as e:
 # Convert to EXE
 # TODO: pyarmor pack -e " --onefile --icon ext/#instagram.ico" main.py
 # TODO: pyinstaller --onefile --icon ext/#instagram.ico main.py
+
+
+
+def restart_program():
+    """Restarts the current program, with file objects and descriptors
+       cleanup
+    """
+
+    try:
+        p = psutil.Process(os.getpid())
+        for handler in p.open_files() + p.connections():
+            os.close(handler.fd)
+    except Exception as e:
+        pass
+
+    python = sys.executable
+    os.execl(python, python, *sys.argv)
+
+
+
+
 
 
 
@@ -90,54 +103,71 @@ else:
                         ░        ░ ░      ░            ░     ░  ░    ░ ░        ░  ░   ░    
                         ░                                                              ░           
 """,1))
+        #C:\Program Files\Git
         print(Fore.LIGHTCYAN_EX + f"[ SETUPWARNING.EXE ] WIESZAKWARE SETUP STARTED | WELCOME {os.getlogin()}")
-        actiondownloadgit = input("[ INPUT ] Is git-scm installed on your computer? [ TYPE 'No' FOR AUTO DOWNLOAD or type 'Yes' if you have git installed on your pc ] :>").capitalize()
-        if actiondownloadgit == "No":
-            print(Fore.LIGHTBLACK_EX + "[ LOG ] Installing git for Windows")
-            try:
-                print(Fore.LIGHTBLACK_EX + "[ LOG ] Stutus: Downloading file")
-                response = urllib.request.urlopen(url="https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-64-bit.exe", timeout=80)
-                time.sleep(2)
-                with open("downloaded_git.exe", "wb+") as writegit:
-                    try:
-                        writegit.write(response.read())
-                        print(Fore.GREEN + "[ GIT ] Git Downloaded please install git!")
-                    except Exception as e:
-                        print(Fore.RED + "[ ERROR ] Unable to write git | Exception: {}".format(e))
-                    writegit.close()
-                print(Fore.LIGHTBLACK_EX + "[ LOG ] Stutus: File Downloaded Successfully!")
-                print("[ GIT ] Version: 2.37.3")
-                #response.read().decode(response.headers.get_content_charset())
-            except:
-                print(Fore.RED + "[ ERROR ] Unable to download file! | Check internet connection.")
-            print("[ LOG ] Waiting for download!")
-            time.sleep(3)
-            print("[ LOG ] Successfull!")
-            try:
-                os.startfile(os.path.join(os.getcwd(), "downloaded_git.exe"))
-                print(Fore.GREEN + "[ SYSTEM ] GIT SETUP STARTED")
-            except Exception as e:
-                print(Fore.RED + f"Unable to start git setup | Exception found: [ {e} ]")
-            print(Fore.LIGHTRED_EX + "[ system32/system/win.exe ] GRANT ADMINISTRATOR PERMISSIONS TO GIT.EXE | JUST CLICK YES")
-            print(Fore.YELLOW + "[ WARNING ] Install git and RELAUNCH wieszakware!")
-            print(Fore.LIGHTYELLOW_EX + "[ RELAUNCH ] RELAUNCH")
-            time.sleep(999)
-            sys.exit()
+        if os.path.exists("C:\Program Files\Git\git-bash.exe") != True:
+            actiondownloadgit = input("[ INPUT ] Is git-scm installed on your computer? [ TYPE 'No' FOR AUTO DOWNLOAD or type 'Yes' if you have git installed on your pc ] :>").capitalize()
+            if actiondownloadgit == "No":
+                print(Fore.LIGHTBLACK_EX + "[ LOG ] Installing git for Windows")
+                try:
+                    print(Fore.LIGHTBLACK_EX + "[ LOG ] Stutus: Downloading file")
+                    response = urllib.request.urlopen(url="https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-64-bit.exe", timeout=80)
+                    time.sleep(2)
+                    with open("downloaded_git.exe", "wb+") as writegit:
+                        try:
+                            writegit.write(response.read())
+                            print(Fore.GREEN + "[ GIT ] Git Downloaded please install git!")
+                        except Exception as e:
+                            print(Fore.RED + "[ ERROR ] Unable to write git | Exception: {}".format(e))
+                        writegit.close()
+                    print(Fore.LIGHTBLACK_EX + "[ LOG ] Stutus: File Downloaded Successfully!")
+                    print("[ GIT ] Version: 2.37.3")
+                    #response.read().decode(response.headers.get_content_charset())
+                except:
+                    print(Fore.RED + "[ ERROR ] Unable to download file! | Check internet connection.")
+                print("[ LOG ] Waiting for download!")
+                time.sleep(3)
+                print("[ LOG ] Successfull!")
+                try:
+                    os.startfile(os.path.join(os.getcwd(), "downloaded_git.exe"))
+                    print(Fore.GREEN + "[ SYSTEM ] GIT SETUP STARTED")
+                except Exception as e:
+                    print(Fore.RED + f"Unable to start git setup | Exception found: [ {e} ]")
+                print(Fore.LIGHTRED_EX + "[ system32/system/win.exe ] GRANT ADMINISTRATOR PERMISSIONS TO GIT.EXE | JUST CLICK YES")
+                print(Fore.YELLOW + "[ WARNING ] Install git and RELAUNCH wieszakware!")
+                print(Fore.LIGHTYELLOW_EX + "[ AUTORELAUNCH ] ...")
+                try:
+                    restart_program()
+                except Exception as e:
+                    print(Fore.LIGHTBLACK_EX + F"[ IGNORE ] Unable to relaunch script. | Exception: {e}")
             
-            #onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
-            #selectfile = input("Select GIT file to install git!")
+                #onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
+                #selectfile = input("Select GIT file to install git!")
  
-        else:
+            else:
 
+                print(Fore.LIGHTCYAN_EX + "[ ACTION / DOWNLOAD ] DOWNLOADING REPOSITORY! MAKE SURE YOU GAVE GIT INSTALLED!")
+                try:
+                    dotseleniumwire = subprocess.call('git clone https://github.com/WieszakWare/missing-files-instagen-exe', shell=True)
+                except:
+                    print(Fore.RED + "Please install git from: [ https://git-scm.com/download/ ]")
+                
+                try:
+                    restart_program()
+                except Exception as e:
+                    print(Fore.LIGHTBLACK_EX + F"[ IGNORE ] Unable to relaunch script. | Exception: {e}")
+
+        else:
             print(Fore.LIGHTCYAN_EX + "[ ACTION / DOWNLOAD ] DOWNLOADING REPOSITORY! MAKE SURE YOU GAVE GIT INSTALLED!")
             try:
                 dotseleniumwire = subprocess.call('git clone https://github.com/WieszakWare/missing-files-instagen-exe', shell=True)
             except:
-                print(Fore.RED + "Please install git from: [ https://git-scm.com/download/ ]")
-            
-            print(Fore.RED  + "[ RELAUNCH ] Relaunch program")
-            time.sleep(10000)
-            pass
+                print(Fore.RED + "[ AUTO INSTALL FAILED ] Please install git from: [ https://git-scm.com/download/ ]")
+                
+            try:
+                restart_program()
+            except Exception as e:
+                print(Fore.LIGHTBLACK_EX + F"[ IGNORE ] Unable to relaunch script. | Exception: {e}")
 
 
 
@@ -156,8 +186,8 @@ else:
 ### Informacje
 __info__ = {
     "appname": "InstaGen",
-    "version": "Release 1.0.6.4",
-    "lastupdate": "6.09.2022",
+    "version": "Release 1.0.6.5",
+    "lastupdate": "19.09.2022",
     "logspath": os.path.join(os.getcwd(), "logs", "logs.log"),
     ".ui-file-path": os.path.join(os.getcwd(), "ui", "ui_main.ui"),
     "input-path": lambda filename: os.path.join("input", f"{filename}"),
@@ -169,13 +199,13 @@ __info__ = {
     "special-password": "wieszakware-future24"
 }
 
-ctypes.windll.kernel32.SetConsoleTitleW(f"{__info__['appname']} | {__info__['version']}")
+ctypes.windll.kernel32.SetConsoleTitleW(f"{__info__['appname']} | {__info__['version']} | Console")
 
 ############################################################################################################################
 
 
 # TODO: ConfigParser - 2 plik configowy - GUI
-conf = json.load(open("config.json"))
+conf = json.load(open("secret.json"))
 
 parser = ConfigParser()
 parser.read('settings.config')
@@ -589,6 +619,13 @@ class Features():
         p.info("Please enter your confirmation code")
         await asyncio.sleep(5)
         p.debug("Came to loop")
+
+        # Write accounts  with error
+        with open(os.path.join(os.getcwd(), "output", "accounts_unknown_status.json"), "a", encoding="utf-8") as savedata:
+            json.dump(jsonaccount, savedata, indent=4)
+            savedata.write("\n")
+            savedata.close()
+
         try:
             while driver.find_element(By.CSS_SELECTOR, "#react-root > section > main > div > div > div:nth-child(1) > div > div > div > form > div.TfHme > div > label > input").is_displayed():
                 p.debug("Not passed, trying again", end="\r")
@@ -860,6 +897,12 @@ class Features():
 
         p.debug("Waiting for confirmation code.")
 
+        # Write accounts  with error
+        with open(os.path.join(os.getcwd(), "output", "accounts_unknown_status.json"), "a", encoding="utf-8") as savedata:
+            json.dump(jsonaccount, savedata, indent=4)
+            savedata.write("\n")
+            savedata.close()
+
         try:
             while driver.find_element(By.CSS_SELECTOR, "#react-root > section > main > div > div > div:nth-child(1) > div.qF0y9.Igw0E.IwRSH.eGOV_.acqo5._4EzTm > form > div > div:nth-child(1) > input").is_displayed():
                 p.debug("Not passed, trying again", end="\r")
@@ -996,7 +1039,7 @@ class APP(QMainWindow):
                 with open(file=f"{file}", mode="r+") as readaccounts:
                     for line in readaccounts.readlines():
                         Loaded_Bots.add(line.replace("\n", ""))
-                    p.success("Loaded Instagram Accounts [ Encoded ] :> " + f"""{base64.b32encode(f"{list(Loaded_Bots)}".encode(encoding="utf-32"))}""")
+                    p.success("Loaded Instagram Accounts [ Encoded ] :> " + f"""{hashlib.sha256(f"{list(Loaded_Bots)}").hexdigest()}""")
                     readaccounts.close()
                 return file
         
@@ -1092,7 +1135,7 @@ class APP(QMainWindow):
                     else:
                         p.critical(f'Proxy list is empty! | Please insert proxies in {__info__["input-path"]("proxies.txt")}')
                 else:
-                    p.warning("Use Proxies turned off")
+                    p.warning("Proxies turned off")
                     accepted_actions += 1
                     return None
                         
@@ -1422,9 +1465,7 @@ class APP(QMainWindow):
             p.info("Accepted Actions :> " + Fore.GREEN + "[ " + str(accepted_actions) + " ]")
             if accepted_actions == 5:
                 p.info(f"Data: [ PhoneNum: {list(_phone)[0]} ] [ Name: {list(_name)[0]} ] [ Username: {list(_username)[0]} ] [ Password: {list(_password)[0]} ] [ Proxy: {_proxy} ]")
-                mainthread = multiprocessing.Process(target=(threading.Thread(target=(asyncio.run(Features().CREATOR_PHONE(Account_Number=None, Phone_Number=list(_phone)[0], Name=list(_name)[0], Username=list(_username)[0], Password=list(_password)[0], Proxy=_proxy, use_proxy=_useproxy))), daemon=True, name="Creating Account")), daemon=True)
-                mainthread.join()
-                mainthread.start()
+                mainthread = asyncio.run(Features().CREATOR_PHONE(Account_Number=None, Phone_Number=list(_phone)[0], Name=list(_name)[0], Username=list(_username)[0], Password=list(_password)[0], Proxy=_proxy, use_proxy=_useproxy))
             else:
                 pass
 ########################################################################################################################################################################################################################################################################################################################################################################
@@ -1495,16 +1536,16 @@ logo = r"""
 # TODO: Wytabowałem logo aby łatwiej zobaczyć logo
 
 if __name__ == "__main__":
-    print(Colorate.Vertical(Colors.red_to_purple, logo,1))
+    print(Colorate.Vertical(Colors.green_to_blue, logo,1))
     p.info(f"Welcome to {__info__['appname']} | Enjoy A Lot Of Features For Free With WieszakWare InstaGen!")
     p.info(f"Application Version: [ {__info__['version']} ]")
-    p.info(f"For more info / help visit our webisite! | 'https://wieszakware.epizy.com'")
+    p.info(f"For more info / help visit our webisite! | 'https://wieszakware.42web.io'")
     p.warning("Application is not stable for now! | Some features will not work!")
     p.debug("Prepairing Files | WieszakWare Files")
     p.debug("Proccessing Files | WieszakWare InstaGen")
     p.debug("Loading UI | UI By WieszakWare")
     p.info("If you have any questions please contact me on DM | Wieszak#6385")
-    p.info("WieszakWare InstaGen By [ Wieszak#6385 [ https://wieszakware.epizy.com ] ] x [ Bombelek#2206 ]")
+    p.info("WieszakWare InstaGen By [ Wieszak#6385 [ https://wieszakware.42web.io ] ] x [ Bombelek#2206 ]")
     #print("")
     #__loader = [math.factorial(load) for load in tqdm(range(random.randrange(3000, 9000)))]
     #print("")
