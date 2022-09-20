@@ -13,7 +13,6 @@ try:
     import hashlib
     import asyncio
     import random
-    import base64
     import webbrowser
     import easygui
     import json
@@ -186,8 +185,8 @@ else:
 ### Informacje
 __info__ = {
     "appname": "InstaGen",
-    "version": "Release 1.0.6.5",
-    "lastupdate": "19.09.2022",
+    "version": "Release 1.0.6.6",
+    "lastupdate": "20.09.2022",
     "logspath": os.path.join(os.getcwd(), "logs", "logs.log"),
     ".ui-file-path": os.path.join(os.getcwd(), "ui", "ui_main.ui"),
     "input-path": lambda filename: os.path.join("input", f"{filename}"),
@@ -597,7 +596,7 @@ class Features():
 
             WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='react-root']/section/main/div/div/div[1]/div/div[6]/button"))).click()
         except Exception as e:
-            p.critical("Unexpected error ocurred")
+            p.critical("Unable to select date | Instagram Error")
             p.critical("Possible problems and fixes:")
             p.critical("1. Phone is used to frequently and couldn't proceed")
             p.critical("2. Instagram Generator generated used username, you should restart app")
@@ -620,6 +619,15 @@ class Features():
         await asyncio.sleep(5)
         p.debug("Came to loop")
 
+        # Zapis konta
+
+        jsonaccount = {
+            "Phone Number:": f"{Phone_Number}",
+            "Name:": f"{Name}",
+            "Username:": f"{Username}",
+            "Password:": f"{Password}"
+        }
+
         # Write accounts  with error
         with open(os.path.join(os.getcwd(), "output", "accounts_unknown_status.json"), "a", encoding="utf-8") as savedata:
             json.dump(jsonaccount, savedata, indent=4)
@@ -633,14 +641,7 @@ class Features():
         except:
             pass
         p.debug("Exited loop")
-        # Zapis konta
 
-        jsonaccount = {
-            "Phone Number:": f"{Phone_Number}",
-            "Name:": f"{Name}",
-            "Username:": f"{Username}",
-            "Password:": f"{Password}"
-        }
 
 
         with open(os.path.join(os.getcwd(), "output", "accounts.json"), "a", encoding="utf-8") as savedata:
@@ -736,13 +737,13 @@ class Features():
         opt.add_argument("--silent") # TODO: --silient -> --silent
         # opt.add_argument("--headless")
         try:
-            p.ok("Binaries Located")
+            p.ok("Chrome Binaries Loaded Successfully!")
             if binaries == None:
                 pass
             else:
                 opt.binary_location = binaries
         except:
-            p.error("Unable to locate .chromebinaries folder.")
+            p.warning(".chromebinaries folder not exists. | SKIPPING | [ please ignore if you have installed google chrome on your computer ]")
             p.ok("Searching for google chrome installed on your computer")
            
             
@@ -897,6 +898,15 @@ class Features():
 
         p.debug("Waiting for confirmation code.")
 
+        # Zapis konta
+
+        jsonaccount = {
+            "Email Address:": f"{Email_Address}",
+            "Name:": f"{Name}",
+            "Username:": f"{Username}",
+            "Password:": f"{Password}"
+        }
+
         # Write accounts  with error
         with open(os.path.join(os.getcwd(), "output", "accounts_unknown_status.json"), "a", encoding="utf-8") as savedata:
             json.dump(jsonaccount, savedata, indent=4)
@@ -912,14 +922,6 @@ class Features():
         except:
             pass
         p.debug("Exited loop")
-        # Zapis konta
-
-        jsonaccount = {
-            "Email Address:": f"{Email_Address}",
-            "Name:": f"{Name}",
-            "Username:": f"{Username}",
-            "Password:": f"{Password}"
-        }
 
         
 
@@ -1465,7 +1467,7 @@ class APP(QMainWindow):
             p.info("Accepted Actions :> " + Fore.GREEN + "[ " + str(accepted_actions) + " ]")
             if accepted_actions == 5:
                 p.info(f"Data: [ PhoneNum: {list(_phone)[0]} ] [ Name: {list(_name)[0]} ] [ Username: {list(_username)[0]} ] [ Password: {list(_password)[0]} ] [ Proxy: {_proxy} ]")
-                mainthread = asyncio.run(Features().CREATOR_PHONE(Account_Number=None, Phone_Number=list(_phone)[0], Name=list(_name)[0], Username=list(_username)[0], Password=list(_password)[0], Proxy=_proxy, use_proxy=_useproxy))
+                asyncio.run(Features().CREATOR_PHONE(Account_Number=None, Phone_Number=list(_phone)[0], Name=list(_name)[0], Username=list(_username)[0], Password=list(_password)[0], Proxy=_proxy, use_proxy=_useproxy))
             else:
                 pass
 ########################################################################################################################################################################################################################################################################################################################################################################
@@ -1532,38 +1534,35 @@ logo = r"""
                         ▒ ░   ░   ░ ░ ░  ░  ░    ░        ░   ▒   ░ ░   ░    ░      ░   ░ ░ 
                         ░           ░       ░                 ░  ░      ░    ░  ░         ░ 
 """
-    
-# TODO: Wytabowałem logo aby łatwiej zobaczyć logo
+
 
 if __name__ == "__main__":
-    print(Colorate.Vertical(Colors.green_to_blue, logo,1))
+    print(Colorate.Vertical(Colors.yellow_to_green, logo,1))
     p.info(f"Welcome to {__info__['appname']} | Enjoy A Lot Of Features For Free With WieszakWare InstaGen!")
     p.info(f"Application Version: [ {__info__['version']} ]")
     p.info(f"For more info / help visit our webisite! | 'https://wieszakware.42web.io'")
-    p.warning("Application is not stable for now! | Some features will not work!")
+    p.warning("If you need help please")
     p.debug("Prepairing Files | WieszakWare Files")
     p.debug("Proccessing Files | WieszakWare InstaGen")
     p.debug("Loading UI | UI By WieszakWare")
     p.info("If you have any questions please contact me on DM | Wieszak#6385")
     p.info("WieszakWare InstaGen By [ Wieszak#6385 [ https://wieszakware.42web.io ] ] x [ Bombelek#2206 ]")
-    #print("")
-    #__loader = [math.factorial(load) for load in tqdm(range(random.randrange(3000, 9000)))]
-    #print("")
-    #__loader = Parallel(n_jobs=10)(delayed(math.factorial)(load) for load in tqdm(range(random.randrange(1000, 2000)), colour="yellow"))
-    #print("")
     p.success("WieszakWare InstaGen Loaded Successfully!")
     
     while checkproperties() == False:
         pass
     else:
 
-        #try:
             app = QApplication(sys.argv)
             window = APP()
             p.success(f"Successfully executed | WieszakWare InstaGen")
-            p.hardwareinfo(f"Logical CPU: [ {[psutil.cpu_count()]} ]")
-            p.hardwareinfo(f"CPU Frequency: {[psutil.cpu_freq()]}")
-            p.hardwareinfo(f"CPU Times: {[psutil.cpu_times()[0]]}")
+
+            schowhardwareinfo = False
+            if schowhardwareinfo:
+
+                p.hardwareinfo(f"Logical CPU: [ {psutil.cpu_count()} ]")
+                p.hardwareinfo(f"CPU Frequency: [ {psutil.cpu_freq()} ]")
+                p.hardwareinfo(f"CPU Times: [ {psutil.cpu_times()[0]} ]")
 
             try:
                 sys.exit(app.exec_())
